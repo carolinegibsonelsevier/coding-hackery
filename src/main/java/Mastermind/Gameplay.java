@@ -27,7 +27,7 @@ for each guess use KeyPegs
 		public static void main(String[] args) {
 
 			String mastermindLogo =
-					"\u001B[36m,--.   ,--.                ,--.                          ,--.           ,--.\n" +
+					"\u001B[96m,--.   ,--.                ,--.                          ,--.           ,--.\n" +
 							"|   `.'   | ,--,--. ,---.,-'  '-. ,---. ,--.--.,--,--,--.`--',--,--,  ,-|  |\n" +
 							"|  |'.'|  |' ,-.  |(  .-''-.  .-'| .-. :|  .--'|        |,--.|      \\` .-. |\n" +
 							"|  |   |  |\\ '-'  |.-'  `) |  |  \\   --.|  |   |  |  |  ||  ||  ||  |\\ `-' |\n" +
@@ -39,15 +39,19 @@ for each guess use KeyPegs
 			//Number of attempts allowed (12 default but want to eventually customise this and the role named)
 			System.out.println("You have 12 attempts CodeBreaker, good luck!");
 
+			// Calling the method to generate and print the secret code from the CodeMaker
+//			generateSecretCode();
+
+			//Calling the feedback pegs
+			//Calling the guesses (for now just to test)
 			playAgain();
 			String goodbyeCodeBreaker =
-					"\u001B[96m                                                                                                                                              \n" +
-							" ,----.                    ,--.,--.                      ,-----.          ,--.       ,--.                         ,--.                  \n" +
-							"'  .-./    ,---.  ,---.  ,-|  ||  |-.,--. ,--.,---.     '  .--./ ,---.  ,-|  | ,---. |  |-. ,--.--. ,---.  ,--,--.|  |,-. ,---. ,--.--. \n" +
-							"|  | .---.| .-. || .-. |' .-. || .-. '\\  '  /| .-. :    |  |    | .-. |' .-. || .-. :| .-. '|  .--'| .-. :' ,-.  ||     /| .-. :|  .--' \n" +
-							"'  '--'  |' '-' '' '-' '\\ `-' || `-' | \\   ' \\   --.    '  '--'\\ '-' '\\ `-' |\\   --.| `-' ||  |   \\   --.\\ '-'  ||  \\  \\\\   --.|  |    \n" +
-							" `------'  `---'  `---'  `---'  `---'.-'  /   `----'     `-----' `---'  `---'  `----' `---' `--'    `----' `--`--'`--'`--'`----'`--'    \n" +
-							"                                     `---'                                                                                               \u001B[0m";
+					"\u001B[96m ,----.                    ,--.,--.                  \n" +
+							"'  .-./    ,---.  ,---.  ,-|  ||  |-.,--. ,--.,---.  \n" +
+							"|  | .---.| .-. || .-. |' .-. || .-. '\\  ' /| .-. : \n" +
+							"'  '--'  |' '-' '' '-' '\\ `-' || `-' | \\   ' \\   --. \n" +
+							" `------'  `---'  `---'  `---'  `---'.-'  /   `----' \n" +
+							"                                     `---'           " + RESET;
 
 			System.out.println(goodbyeCodeBreaker);
 

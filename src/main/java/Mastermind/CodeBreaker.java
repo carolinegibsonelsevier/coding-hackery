@@ -43,18 +43,7 @@ public class CodeBreaker {
 			userGuess = getUserGuess(scanner);
 			Feedback.keyPegFeedback(userGuess);
 			if (checkGuess(userGuess)) {
-//				System.out.println("We have a winner!");
-				System.out.println();
-				String mastermindWinner =
-						"\u001B[95m                                             ,---. \n" +
-								"\u001B[95m,--.   ,--.,--.                              |   | \n" +
-								"\u001B[95m|  |   |  |`--',--,--, ,--,--,  ,---. ,--.--.|  .' \n" +
-								"\u001B[95m|  |.'.|  |,--.|      \\|      \\| .-. :|  .--'|  |  \n" +
-								"\u001B[95m|   ,'.   ||  ||  ||  ||  ||  |\\   --.|  |   `--'  \n" +
-								"\u001B[95m'--'   '--'`--'`--''--'`--''--' `----'`--'   .--.  \n" +
-								"\u001B[95m                                             '--'  \u001B[0m "+ RESET + " ";
-
-				System.out.println(mastermindWinner);
+				System.out.println("We have a winner!");
 				break;
 			} else {
 				if (attempt < 12) {
@@ -63,14 +52,6 @@ public class CodeBreaker {
 			}
 		}
 		if (!checkGuess(userGuess)) {
-			String mastermindLoser =
-					"\u001B[92m,--.                                \n" +
-							"|  |    ,---.  ,---.  ,---. ,--.--. \n" +
-							"|  |   | .-. |(  .-' | .-. :|  .--' \n" +
-							"|  '--.' '-' '.-'  `)\\   --.|  |    \n" +
-							"`-----' `---' `----'  `----'`--'    " + RESET + " ";
-
-			System.out.println(mastermindLoser);
 			System.out.println("Sorry pal the correct code was: ");
 			for (CodeMaker.CodePeg colour : CodeMaker.getSecretCode()) {
 				System.out.print(colour.getCodePegColour() + RESET + " ");
